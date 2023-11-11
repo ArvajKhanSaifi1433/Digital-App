@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .btn {
+    @apply bg-color-secondary px-9 py-3 rounded-md capitalize font-bold hover:opacity-80;
+  }
+}
+@layer components {
+  .sm-btn {
+    @apply bg-color-secondary px-6 py-[7px] rounded-md capitalize font-semibold hover:opacity-80;
+  }
+}
+@layer components {
+  .title {
+    @apply lg:text-4xl md:leading-snug sm:text-3xl sm:font-bold text-2xl font-semibold capitalize;
+  }
+}
+
+.user-pic.active-pic {
+  border: 2px solid #ff7d3b;
+}
+.user-text {
+  display: none;
+}
+.user-text.active-text {
+  display: block;
+  animation: akk 1s linear forwards;
+}
+@keyframes akk {
+  0% {
+    margin-top: 40px;
+    opacity: 0;
+  }
+  50% {
+    margin-top: 20px;
+    opacity: 0.3;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.card{
+  perspective: 1000px;
+}
+
+.fn,.bn{
+  backface-visibility: hidden;
+  transition: .4s ease;
+}
+.fn{
+  overflow: hidden;
+}
+
+.rot1{
+  transform: rotateY(180deg);
+}
+.rot2{
+  transform: rotateY(360deg);
+}
